@@ -1,0 +1,12 @@
+.container
+	.d-flex.align-items-center.justify-content-between
+		%h1.mt-2 Flashcards
+		= link_to "New Flashcard", new_flashcard_path, class: "btn btn-success"
+	.row.row-cols-1.row-cols-md-2.g-4
+		- @flashcards.each do |card|
+			.col
+				.card.text-center
+					.card-body
+						%h5= card.word
+						%h6= card.translation
+						= link_to "Edit", edit_flashcard_path(card), class: "btn btn-primary"

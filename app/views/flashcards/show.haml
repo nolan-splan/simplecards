@@ -1,0 +1,6 @@
+.container.w-25.mt-3
+	.card.text-center
+		.card-body
+			%h3= @flashcard.word
+			%h5= @flashcard.translation
+			= link_to "Edit", edit_flashcard_path(@flashcard), class: "btn btn-primary"
